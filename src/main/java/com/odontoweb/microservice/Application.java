@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 @EnableAutoConfiguration
-@ComponentScan({"com.odontoweb.arquitetura", "com.odontoweb.microservice"})
+@ComponentScan(basePackages = {"com.odontoweb.arquitetura", "com.odontoweb.microservice"})
 public class Application {
 
 	public static void main(String[] args) {
