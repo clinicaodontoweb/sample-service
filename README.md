@@ -18,7 +18,36 @@ Para iniciar o serviço rode o seguinte comando na raiz do projeto:
 
 Para iniciar o serviço pela IDE apenas rode a classe **com.odontoweb.microservice.Application.java**
 
-### Acessando o serviço
+### Lista de serviços:
 
-Acesse a url: `http://localhost:3333/sample/v1/helloworld`
-Header Authorization: `Bearer eyJ0eXBlIjoiSldUIiwiYWxnIjoiSFM1MTIifQ.eyJzdWIiOiJhbmRyZSIsInRlbmFudCI6InRlbmFudC1hbmRyZSIsImlhdCI6MTQ2MjMyNzE2NX0.h1qKMOhU5phnK9ldXxKW7Fgg-2MERByRosv6_cpvlXhbkzb17ApoxmWqHwmvCBewLeOuOlzBOFw-seNFQsbPfA`
+#### Autenticação (POST)
+
+```
+http://localhost:3333/sample-service/auth
+```
+
+**Request**
+
+```
+{
+  "email": "andre@gmail.com",
+  "senha": "123456"
+}
+```
+
+--------------------------------------------
+
+
+#### Lista de roles (GET)
+
+```
+http://localhost:3333/sample-service/protected
+```
+
+**Request Header**
+
+`
+X-Auth-Token : {token}
+`
+
+--------------------------------------------
